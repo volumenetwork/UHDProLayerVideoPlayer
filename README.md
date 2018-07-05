@@ -1,6 +1,13 @@
 # UHDProLayerVideoPlayer
 Javascript Library to be able to play videos from a Layer on the UHDPro Application. This is **only** designed to work with the **Volume UHDPro Android Application** version 1.5.0 and upwards.
 
+## Installation
+
+`yarn add uhdpro-layer-video-player`
+
+`npm install uhdpro-layer-video-player`
+
+## Usage
 
 ```$javascript
 
