@@ -21,7 +21,7 @@ function outputCommand(command, fileName) {
     cmdArr.push(fileName);
   }
 
-  const inBrowser = typeof process !== 'object';
+  const inBrowser = typeof alert === 'function';
   const alertFunction = !inBrowser ? console.log : window.alert;
   alertFunction(buildCommand(cmdArr));
 }
