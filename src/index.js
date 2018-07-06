@@ -5,9 +5,6 @@ const VIDEO_START_COMMAND = 'start';
 const VIDEO_STOP_COMMAND = 'stop';
 const VIDEO_COMMAND_SEPARATOR = ':';
 
-const inBrowser = typeof process !== 'object';
-const alertFunction = !inBrowser ? console.log : window.alert;
-
 const defaults = {
   onVideoPlayCallbacks: [],
   onVideoEndCallbacks: []
@@ -24,6 +21,8 @@ function outputCommand(command, fileName) {
     cmdArr.push(fileName);
   }
 
+  const inBrowser = typeof process !== 'object';
+  const alertFunction = !inBrowser ? console.log : window.alert;
   alertFunction(buildCommand(cmdArr));
 }
 
