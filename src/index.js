@@ -42,7 +42,7 @@ function randomString(length = 5) {
 function sendCommandToUHDPro(opts) {
   const inBrowser = typeof alert === 'function';
   const alertFunction = !inBrowser ? console.log : window.alert;
-  alertFunction(opts);
+  alertFunction(JSON.stringify(opts));
 }
 
 /**
